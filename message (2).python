@@ -1,0 +1,138 @@
+"""
+EX1: Se da numarul x = -5.
+Foloseste un while pentru a afisa numerele negative pornind
+de la -5.
+La final, afiseaza un mesaj ca s-au afisat toate numerele
+negative.
+"""
+# x = -5
+# while x < 0:
+#     print(x)
+#     x += 1
+# print('S-au afisat toate nr')
+
+"""
+EX2: Calcularea mediei
+Ne dorim sa cerem utilizatorului sa introduca notele
+luate la examene. 
+Vom lua input-ul de la utilizator, pana
+cand acesta introduce -1.
+In functie de notele luate, trebuie sa calculam media aritmetica
+si sa o afisam.
+"""
+# note = int(input('Introduceti notele: '))
+# media_aritmetica = 0
+# total_note = 0
+# while note != -1:
+#     total_note += 1
+#     media_aritmetica += note
+#     note = int(input('Introduceti notele: '))
+# print(f'nr total de note: {total_note}')
+# print(f'MEDIA este: {media_aritmetica / total_note}')
+
+"""
+EX3: Afiseaza toate numerele pare pana la 10.
+"""
+# for x in range(11):
+#     if x % 2 == 0:
+#         print(f'Nr {x}')
+# else:
+#     print('FINAL!')
+
+"""
+EX4: Se da lista:
+legume = ['spanac', 'castraveti', 'conopida', 'ardei']
+Afiseaza toate elementele din lista accesandu-le dupa index.
+"""
+# legume = ['spanac', 'castraveti', 'conopida', 'ardei']
+# for leguma in range(len(legume)):
+#     print(legume[leguma])
+
+"""
+EX5:
+2. Se da lista:
+produse = [
+    {
+        'nume produs': 'Rosii',
+        'pret': 5
+    },
+    {
+        'nume produs': 'Paine',
+        'pret': 8
+    },
+    {
+        'nume produs': 'Lapte',
+        'pret': 6
+    },
+    {
+        'nume produs': 'Cafea'
+    }
+]
+Sa se afiseze toate produsele care au pretul mai mare de 5 lei.
+"""
+# produse = [
+#     {
+#         'nume produs': 'Rosii',
+#         'pret': 5
+#     },
+#     {
+#         'nume produs': 'Paine',
+#         'pret': 8
+#     },
+#     {
+#         'nume produs': 'Lapte',
+#         'pret': 6
+#     },
+#     {
+#         'nume produs': 'Cafea'
+#     }
+# ]
+# # print(produse)
+# for produs in range(len(produse)):
+#     if produse[produs].get('pret') == 5:
+#         continue
+#     print(produse[produs])
+
+"""
+EX6: Sa se afiseze primul numar par din intervalul 1 - 10
+(inclusiv capetele de interval).
+"""
+# for numar_par in range(1,11):
+#     if numar_par % 2 == 0:
+#         print(f'primul nr par din intervalu 1 - 10 este {numar_par}')
+#         break
+
+"""
+par_gasit = False
+for numar in range(1, 11):
+  if numar % 2 == 0 and not par_gasit:
+      print(numar)
+      par_gasit = True
+  if numar == 1 or numar == 10:
+      print(numar)
+"""
+"""
+EX7:
+Se da lista:
+participanti = ['Maria', 'Ionela', 'Marius', 'Paul']
+Folosind un ciclu repetitiv, cauta daca 'Marius' se afla in lista de participanti.
+Dupa ce l-ai gasit intrerupe ciclul repetitiv.
+"""
+# participanti = ['Maria', 'Ionela', 'Marius', 'Paul']
+#
+# for participant in participanti:
+#     if participant == "Marius":
+#         break
+#     print(participant)
+
+"""
+EX8: 1. Se da lista:
+numere = [1, 2, 3, 4, 5, 6, 7]
+Afiseaza toate elementele din lista numere,
+cu exceptia numerelor 3 si 5
+"""
+# numere = [1, 2, 3, 4, 5, 6, 7]
+# for numar in range(len(numere)):
+#     if numar == 3 or numar == 5:
+#         continue
+#     print(numar)

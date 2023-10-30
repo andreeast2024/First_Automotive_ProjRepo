@@ -1,0 +1,421 @@
+"""
+1. Se dau doua liste:
+lista_1 = [10, 20, 30, 40, 50, 10]
+lista_2 = [1, 2, 3, 4, 5]
+Pentru fiecare lista verifica daca primul si ultimul element sunt egale.
+In functie de rezultat, afiseaza un mesaj.
+"""
+# lista_1 = [10, 20, 30, 40, 50, 10]
+# lista_2 = [1, 2, 3, 4, 5]
+# if lista_1[0] == lista_1[-1]:
+#     print('Elementele sunt egale')
+# else:
+#     print('Elementele sunt diferite.')
+# if lista_2[0] == lista_2[-1]:
+#     print('Elementele sunt egale')
+# else:
+#     print('Elementele sunt diferite.')
+
+"""
+2. Scrie un program care afiseaza de cate ori apare litera 'e' in
+stringul str_1 = 'Emma is a sofware developer.'
+"""
+# str_1 = 'Emma is a sofware developer.'
+# print(str_1.lower().count('e'))
+
+"""
+3. Scrie un program in care citesti de la tastatura doua nr intregi,
+numite base si exponent.
+Afiseaza intr-un mesaj sugestiv, valoarea lui base la puterea exponent.
+Atentie: indiferent daca utilizatorul a introdus un numar pozitiv sau negativ
+ca si exponent, trebuie sa ridici base la puterea exponent pozitiv.
+hint: exploreaza functia abs() si vezi cum o poti folosi
+"""
+# base = abs(int(input('Introduceti numarul base:')))
+# exponent = abs(int(input('Introduceti numarul exponent:')))
+# print(f'{base ** exponent}')
+
+"""
+4. Scrie un program in care se citeste de la tastatura un string.
+Daca string-ul are numar impar de caractere, afiseaza un string care
+contine primul caracter, caracterul din mijloc si ultimul caracter
+al string-ului citit de la tastatura.
+Daca string-ul are numar par de caractere, afiseaza un string care contine doar primul
+si ultimul caracter  al string-ului citit de la tastatura.
+"""
+# string1 = input('Introduceti un string: ')
+# string_mid = len(string1) // 2
+# if len(string1) % 2 == 1:
+#     print(f'{string1[0]+ string1[string_mid] + string1[-1]}')
+# else:
+#     print(f'{string1[0]+ string1[-1]}')
+
+"""
+5. Se dau doua variabile:
+str1 = 'Abc'
+str2 = 'Xyz'
+Creeaza o variabila string, str3 formata din:
+- primul caracter din str1 cu litera mica
+- primul caracter din str2 cu litera mare
+- al doilea caracter din str1 cu litera mare
+- al doilea caracter din str2 cu litera mare
+- al treilea caracter din str1 cu litera mare
+- al treilea caracter din str2 cu litera mica
+"""
+# str1 = 'Abc'
+# str2 = 'Xyz'
+#
+# str3 = str1[0].lower()+str2[0].upper()+str1[1].upper()+str2[1].upper()+str1[2].upper()+str2[2].lower()
+# print(str3)
+
+"""
+6. Se da lista:
+fruits = ["apple", "banana", "cherry"]
+a. Schimba elementul 'apple' cu 'kiwi'.
+b. Foloseste metoda append() pentru a adauga elementul 'oranges'.
+c. Foloseste metoda insert() pentru a adauga elementul 'lemon' ca al doilea
+element din lista.
+d. Foloseste metoda remove() pentru a sterge elementul 'banana' din lista.
+e. Foloseste un index negativ pentru a accesa ultimul element din lista.
+f. Foloseste un index negativ pentru a accesa penultimul element din lista.
+g. Afiseaza lungimea listei.
+h. Foloseste slicing pe lista, astfel incat sa obtii o lista cu al doilea, al treilea
+si al patrulea element.
+"""
+# fruits = ["apple", "banana", "cherry"]
+#punctul a
+# fruits[0] = 'kiwi'
+# print(fruits)
+#punctul b
+# fruits.append('oranges')
+# print(fruits)
+#punctul c
+# fruits.insert(1, 'lemon')
+# print(fruits)
+#punctul d
+# fruits.remove('banana')
+# print(fruits)
+#punctul e
+# print(fruits[-1])
+#punctul f
+# print(fruits[-2])
+#punctul g
+# print(len(fruits))
+#punctul h
+# print(fruits[1:])
+
+"""
+7. Inverseaza lista my_list = [100, 200, 300, 400].
+"""
+# my_list = [100, 200, 300, 400]
+# var1
+# my_list.reverse()
+# print(my_list)
+# var2
+# print(my_list[::-1])
+"""
+8. Lista de cumparaturi:
+Se citeste de la tastatura o lista de cumparaturi. Utilizatorul introduce
+lista de cumparaturi ca un string, cu alimentele separate prin virgula,
+ATENTIE: fara spatii
+Exemplu:rosii,castraveti,branza,oua
+a. Sa se transforme string-ul citit de la tastatura intr-o lista. (vezi metode ajutatoare string).
+b. Sorteaza lista de cumparaturi si printeaza lista sortata.
+c. Adauga un aliment nou in lista de cumparaturi.
+d. Sterge un aliment din lista de cumparaturi.
+e. Modifica elementul de la pozitia 0 din lista.
+f. Daca lista contine 'rosii' in ea, afiseaza mesajul "Aliment sanatos".
+Daca nu, afiseaza mesajul "Iti recomandam rosiile de asemenea".
+"""
+# lista_cumparaturi = input('Introduceti lista de cumparaturi:').split(',')
+# #punctul a
+# lista_cumparaturi = list(lista_cumparaturi)
+# print(type(lista_cumparaturi))
+# print(lista_cumparaturi)
+# #punctul b
+# print(sorted(lista_cumparaturi))
+# #punctul c
+# lista_cumparaturi.append('salam')
+# print(lista_cumparaturi)
+# #punctul d
+# lista_cumparaturi.pop()
+# print(lista_cumparaturi)
+# #punctul e
+# lista_cumparaturi[0] = 'muraturi'
+# #punctul f
+# if 'rosii' in lista_cumparaturi:
+#     print('Aliment sanatos')
+# else:
+#     print('Iti recomandam rosiile de asemenea')
+
+"""
+9. Se da lista fructe = ['capsuni', 'mere', 'lamai'].
+Converteste lista la string si afiseaza string-ul. A se vedea metoda join(). (search on google)
+"""
+# fructe = ['capsuni', 'mere', 'lamai']
+# separator = ' '
+# fructe = separator.join(fructe)
+# print(fructe)
+# print(type(fructe))
+"""
+10. Se da lista numere = [1, 2, 3, 4, 56, 22, 5].
+Afiseaza elementul cu valoarea maxima din string. (google- functia max())
+"""
+# numere = [1, 2, 3, 4, 56, 22, 5]
+# print(max(numere))
+"""
+11. Se da lista preturi = [12.3, 34.5, 22].
+Calculeaza suma elementelor din lista preturi. (google - functia sum())
+"""
+# preturi = [12.3, 34.5, 22]
+# print(sum(preturi))
+"""
+12. Se da dictionarul:
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+a. Afiseaza valoarea cheii city.
+b. Kelly a fost promovata. Salariul ei este acum de 10000 lei. Fa modificarea si in dictionar.
+c. Sterge varsta din dictionar.
+d. Adauga o noua pereche cheie-valoare in dictionar, cu cheia employment_date. Valoarea o alegi tu.
+e. Verifica daca exista cheia 'country' in dictionar. Daca nu exista, adauga-o.
+"""
+# sample_dict = {
+#     "name": "Kelly",
+#     "age": 25,
+#     "salary": 8000,
+#     "city": "New york"
+# }
+# #punctul a
+# print(sample_dict["city"])
+# #punctul b
+# #var1
+# sample_dict.update({'salary':10000})
+# #var2
+# sample_dict["salary"] = 10000
+# print(sample_dict)
+# #punctul c
+# sample_dict.pop('age')
+# print(sample_dict)
+# #punctul d
+# sample_dict.update({'employment_date': '12/07/2022'}) # pentru functia update folosim intodeauna {}
+# print(sample_dict)
+# #punctul e
+# if sample_dict.get('country') in sample_dict:
+#     print(f'Cheia contry exista in dictionar')
+# else:
+#     sample_dict['country'] = 'USA'
+#     print(sample_dict)
+
+"""
+13. Se da dictionarul:
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+a. Afiseaza toate cheile din dictionar. (HINT: metoda keys())
+b. Afiseaza toate valorile din dictionar. (HINT: metoda values())
+c. Verifica lungimea dictionarului.
+"""
+# sample_dict = {
+#     "name": "Kelly",
+#     "age": 25,
+#     "salary": 8000,
+#     "city": "New york"
+# }
+# #punctul a
+# print(sample_dict.keys())
+# #punctul b
+# print(sample_dict.values())
+# #punctul c
+# print(len(sample_dict))
+
+
+"""
+14. Gasirea unui element intr-un dictionar
+Se da dictionarul:
+persoana = {
+    'nume': 'Alex',
+    'varsta': 25,
+    'oras': 'Bucuresti'
+}
+Utilizatorul introduce cheia cautata.
+Verifica daca aceasta se gaseste sau nu in dictionar.
+"""
+# persoana = {
+#     'nume': 'Alex',
+#     'varsta': 25,
+#     'oras': 'Bucuresti'
+# }
+# cheie = input('Introduceti cheia dorita: ')
+# if cheie in persoana:
+#     print(f'cheia {cheie} se afla in dictionar!')
+# else:
+#     print(f'cheia {cheie} nu se afla in dictionar!')
+
+"""
+15. Adaugarea unui element intr-un dictionar
+Se da dictionarul:
+ persoana = {
+    'nume': 'Alex',
+    'varsta': 25,
+    'oras': 'Bucuresti'
+}
+Utilizatorul trebuie sa introduca cheia si valoarea pe care doreste sa
+le adauge in dictionar.
+Foloseste metoda update() (metoda ajutatoare pe dictionar)
+"""
+# persoana = {
+#     'nume': 'Alex',
+#     'varsta': 25,
+#     'oras': 'Bucuresti'
+# }
+# persoana.update({'sex':'masculin'})
+# print(persoana)
+
+"""
+16. Stergerea unui element din dictionar
+ Se da dictionarul:
+ persoana = {
+    'nume': 'Alex',
+    'varsta': 25,
+    'oras': 'Bucuresti'
+}
+Utilizatorul introduce cheia elementului de eliminat.
+a. Elimina elementul, verificand prima data daca cheia se afla in dictionar,
+si daca se afla, foloseste metoda del.
+b. Elimina elementul, folosind metoda ajutatoare pop().
+"""
+persoana = {
+    'nume': 'Alex',
+    'varsta': 25,
+    'oras': 'Bucuresti'
+}
+#punctul a
+# cheie_del = input('Introduceti cheia pe care o vreti eliminata:')
+# if cheie_del in persoana:
+#     del persoana[cheie_del]
+#     print(persoana)
+# else:
+#     print('Cheia nu se afla in dictionar!')
+#punctul b
+# cheie_del = input('Introduceti cheia pe care o vreti eliminata:')
+# if cheie_del in persoana:
+#     persoana.pop(cheie_del)
+#     print(persoana)
+# else:
+#     print('Cheia nu se afla in dictionar!')
+
+
+"""
+17. Concatenarea a doua dictionare.
+Se dau doua dictioanare:
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+Sa se concateneze cele doua dictionare folosind metoda update().
+Observatie: Metoda update() o putem folosi pentru a adauga unul sau mai multe
+perechi cheie:valoare in dictionar.
+"""
+# dict1 = {'a': 1, 'b': 2}
+# dict2 = {'c': 3, 'd': 4}
+# dict1.update(dict2)
+# print(dict1)
+"""
+18. Se da urmatoarea lista cu dictionare:
+lista = [{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}]
+a. Adauga perechea {'c':'3'} in primul dictionar din lista.
+b. Adauga un nou dictionar ca element in lista. Adauga-l la final.
+c. Aduaga un nou dictionar ca element in lista, la indexul 1.
+d. Verifica daca in al doilea dictionar din lista se gaseste cheia 'c'.
+"""
+# lista = [{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}]
+#punctul a
+# lista[0].update({'c': 3}) #functia update adauga perechea lipsa.
+# print(lista)
+#punctul b
+# lista.append({'g': 7, 'h': 8})
+# print(lista)
+# #punctul c
+# lista.insert(1, {'y': 12, 'z': 13})
+# print(lista)
+#punctul d
+# if lista[1].get('c'):
+#     print('Cheia este in lista!')
+# else:
+#     print('Cheia nu se afla in lista.')
+
+"""
+19.
+Se citeste de la tastatura un numar.
+a. Printeaza un mesaj sugestiv daca numarul este par sau nu.
+b. Daca numarul este multiplu de 4, afiseaza un mesaj sugestiv.
+"""
+# numar = int(input('Introduceti un numar: '))
+# #punctul a
+# if numar % 2 == 0:
+#     print('Numarul este par!')
+# else:
+#     print('Numarul este impar!')
+# if numar % 4 == 0:
+#     print('Numarul este divizibil cu 4!')
+# else:
+#     print('Numarul nu este divizibil cu 4')
+
+"""
+20.
+Se citesc de la tastatura doua numere, num si check. Verifica daca
+num este divizibil cu check si afiseaza un mesaj corespunzator catre utilizator.
+"""
+# num = int(input('Introduceti valoarea lui num: '))
+# check = int(input('Introduceti valoarea lui check: '))
+# if num % check == 0:
+#     print(f'Numarul {num} este divizibil cu numarul {check}.')
+# else:
+#     print(f'Numarul {num} nu este divizibil cu numarul { check}.')
+
+"""
+21. Se da dictionarul:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+a. Foloseste metoda get() pentru a printa valoarea cheii 'model'.
+b. Schimba valoarea cheii 'year' in 1970.
+c. Adauga perechea cheie:valoare 'color':'red' in dictionar.
+Adaug-o folosind accesarea dictionarului prin cheie (car['color']) si dand o valoare.
+Adaug-o folosind metoda update()
+d. Foloseste metoda pop() pentru a sterge 'model' din dictionar.
+e. Foloseste metoda empty() pentru a 'goli' dictionarul.
+"""
+# car = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# #punctul a
+# print(car.get('model'))
+# #punctul b
+# car['year'] = 1970
+# print(car)
+# #punctul c
+# car.update({'color': 'red'})
+# print(car)
+# car['color'] = 'red'
+# print(car)
+# #punctul d
+# car.pop('model')
+# print(car)
+# #punctul e
+# print(car.clear())
+
+descriere_masina = “Masina aleasa costa 20 000 euro si se poate achita in rate!”
+	print(descriere_masina[:5]) va afisa cuvantul “Masina”
+	print(descriere_masina[0:6] va afisa cuvantul “Masina”
+	print(descriere_masina[:6] va afisa cuvantul “Masina”
+	print(descriere_masina[-5:] va afisa cuvantul “rate”
