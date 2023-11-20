@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "nume": "Televizor",
+        "cantitate": 10,
+        "pret(per buc))": 2400,
+        "nume_furnizor": "SONY"
+    },
+    {
+        "id": "2",
+        "nume": "Apple 15",
+        "cantitate": 13,
+        "pret(per buc))": 5000,
+        "nume_furnizor": "Apple"
+    },
+    {
+        "id": "3",
+        "nume": "Monitor",
+        "cantitate": 0,
+        "pret(per buc))": 1000,
+        "nume_furnizor": "HP"
+    }
+]
