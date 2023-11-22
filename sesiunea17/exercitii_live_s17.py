@@ -82,12 +82,12 @@ def generator_loto():
 
 loto = generator_loto()
 # Var 1
-for i in range(7):
-    if i < 6:
-        print(f'{i+1} Bila cu nr: {next(loto)}')
-    else:
-        print(f'Numar magic: {next(loto)}')
-
+# for i in range(7):
+#     if i < 6:
+#         print(f'{i+1} Bila cu nr: {next(loto)}')
+#     else:
+#         print(f'Numar magic: {next(loto)}')
+#
 # Var 2
 for i, nr in enumerate(loto, 1):
     if i == 7:
