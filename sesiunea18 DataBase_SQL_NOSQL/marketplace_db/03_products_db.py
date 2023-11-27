@@ -1,0 +1,3 @@
+"""
+INTERACTIUNEA cu tabelul products
+"""

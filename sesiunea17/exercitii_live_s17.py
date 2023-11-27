@@ -82,18 +82,18 @@ def generator_loto():
 
 loto = generator_loto()
 # Var 1
-# for i in range(7):
-#     if i < 6:
-#         print(f'{i+1} Bila cu nr: {next(loto)}')
-#     else:
-#         print(f'Numar magic: {next(loto)}')
-#
-# Var 2
-for i, nr in enumerate(loto, 1):
-    if i == 7:
-        print(f"Nr magic este : {nr}")
+for i in range(7):
+    if i < 6:
+        print(f'{i+1} Bila cu nr: {next(loto)}')
     else:
-        print(f"Bila cu nr: {i} este: {nr} ")
+        print(f'Numar magic: {next(loto)}')
+
+# # Var 2
+# for i, nr in enumerate(loto, 1):
+#     if i == 7:
+#         print(f"Nr magic este : {nr}")
+#     else:
+#         print(f"Bila cu nr: {i} este: {nr} ")
 # DECORATORS
 #
 # 3. Implementați o clasă User, cu următoarele cerințe:
@@ -106,60 +106,60 @@ for i, nr in enumerate(loto, 1):
 #
 # Se va testa apelarea metodei get_info inainte de logare, dupa logare, dupa delogare, și după încă o logare.
 
-# class User:
-#
-#     def __init__(self, nume, email, parola, data_nasterii):
-#         self.nume = nume
-#         self.email = email
-#         self.parola = parola
-#         self.data_nasterii = data_nasterii
-#         self.logat = False
-#
-#
-#
-#
-#
-#
-#     def login_required(original_func):
-#         def wrapper(self, *args, **kwargs):
-#             if self.logat:
-#                 return original_func(self, *args, **kwargs)
-#             else:
-#                 print("Trebuie sa fi logat")
-#
-#         return wrapper
-#
-#     def login(self, email, parola):
-#         if email == self.email and parola == self.parola:
-#             self.logat = True
-#             print(f"Buna utilizatorule {self.nume} sunteti logat")
-#         else:
-#             print("Email / parola gresita!")
-#
-#     def logout(self):
-#         self.logat = False
-#         print("La revedere utilizatorule!")
-#
-#     @login_required
-#     def get_info(self):
-#         if self.logat:
-#             print(f"Nume: {self.nume}, email: {self.email}, parola: {self.parola}, data nasterii: {self.data_nasterii}")
-#         else:
-#             print(f"Nu sunteti logat")
-#
-#
-# user = User("Stefan", "office@gmail.com", "birou07", "03.10.2000")
-#
-# user.get_info()
-# user.login("office@gmail.com", "birou07")
-# user.get_info()
-# user.logout()
-# user.get_info()
-# user.login("office@gmail.com", "birou07")
-# user.get_info()
-# user.logout()
-# user.login("office@gmail.com", "birou07")
-# user.get_info()
+class User:
+
+    def __init__(self, nume, email, parola, data_nasterii):
+        self.nume = nume
+        self.email = email
+        self.parola = parola
+        self.data_nasterii = data_nasterii
+        self.logat = False
+
+
+
+
+
+
+    def login_required(original_func):
+        def wrapper(self, *args, **kwargs):
+            if self.logat:
+                return original_func(self, *args, **kwargs)
+            else:
+                print("Trebuie sa fii logat")
+
+        return wrapper
+
+    def login(self, email, parola):
+        if email == self.email and parola == self.parola:
+            self.logat = True
+            print(f"Buna utilizatorule {self.nume} sunteti logat")
+        else:
+            print("Email / parola gresita!")
+
+    def logout(self):
+        self.logat = False
+        print("La revedere utilizatorule!")
+
+    @login_required
+    def get_info(self):
+        if self.logat:
+            print(f"Nume: {self.nume}, email: {self.email}, parola: {self.parola}, data nasterii: {self.data_nasterii}")
+        else:
+            print(f"Nu sunteti logat")
+
+
+user = User("Stefan", "office@gmail.com", "birou1", "01.08.1984")
+
+user.get_info()
+user.login("office@gmail.com", "birou07")
+user.get_info()
+user.logout()
+user.get_info()
+user.login("office@gmail.com", "birou07")
+user.get_info()
+user.logout()
+user.login("office@gmail.com", "birou07")
+user.get_info()
 
 
 
