@@ -121,3 +121,32 @@ def suma(*args, **kwargs):
 print(suma(1, 2, x=3, y=4))
 print(suma(1, 2))
 print(suma(a=1, b=2))
+
+"""
+GENERATORS
+
+2. Implementați un generator pentru loteria 6/49 și noroc:
+Primele 6 apelări către generator vor da cate un numar intre 1 si 49 (inclusiv)
+Ultima apelare va da un singur număr de “noroc” format din 7 cifre
+"""
+
+import random
+
+random.randint(1, 49)
+
+def generator_loto():
+    nr_magic = random.randint(1000000, 9999999)
+    for n in range(6):
+        n = random.randint(1, 49)
+        yield n
+    yield nr_magic
+
+loto = generator_loto()
+for i in range(7):
+    if i < 6:
+        print(f'{i+1} Bila cu nr: {next(loto)}')
+    else:
+        print(f'Numar magic: {next(loto)}')
+
+
+
