@@ -6,7 +6,7 @@ Singleton Design Pattern
 #astfel incat, de-a lungul programului,
 #nu vom putea avea mai mult de o instanta a clasei respective
 
-class SingletonClass:
+class SingletonClass(object):
     __instance = None
     sector = "IT"
 
@@ -44,4 +44,7 @@ if __name__ == '__main__':
 else:
     print("fisierul a fost importat doar")
 
-
+def my_sum(a,b):
+    print(a + b)
+my_sum(1,2)
+my_sum("str1", "str2")
